@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-05T23:31:10 PDT" name="Default suite" finished-at="2022-09-05T23:31:39 PDT" duration-ms="28756">
+    <groups>
+    </groups>
+    <test started-at="2022-09-05T23:31:10 PDT" name="Default test" finished-at="2022-09-05T23:31:39 PDT" duration-ms="28756">
+      <class name="com.app.execution.Execution">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:10 PDT" name="browserLaunch" finished-at="2022-09-05T23:31:25 PDT" duration-ms="14283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method signature="loginUsingIncorrectCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:25 PDT" name="loginUsingIncorrectCredentials" data-provider="incorrectusernameandpassword" finished-at="2022-09-05T23:31:28 PDT" duration-ms="2464" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demo_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[demo_password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUsingIncorrectCredentials -->
+        <test-method signature="loginUsingCorrectCredentials(java.lang.String,java.lang.String)[pri:1, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:28 PDT" name="loginUsingCorrectCredentials" data-provider="usernameandpassword" finished-at="2022-09-05T23:31:30 PDT" duration-ms="1583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUsingCorrectCredentials -->
+        <test-method signature="availableBalanceValidation()[pri:2, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:30 PDT" name="availableBalanceValidation" finished-at="2022-09-05T23:31:31 PDT" duration-ms="1749" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Balance is not matching expected [$114282.44] but found [$294102.44]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Balance is not matching expected [$114282.44] but found [$294102.44]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at com.app.pageexe.HomePageExe.validateAccountBalance(HomePageExe.java:23)
+at com.app.execution.Execution.availableBalanceValidation(Execution.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- availableBalanceValidation -->
+        <test-method signature="fundTransferandValidation()[pri:3, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:31 PDT" name="fundTransferandValidation" finished-at="2022-09-05T23:31:33 PDT" duration-ms="1952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fundTransferandValidation -->
+        <test-method signature="viewTransactionHistory()[pri:4, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:33 PDT" name="viewTransactionHistory" finished-at="2022-09-05T23:31:34 PDT" duration-ms="983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewTransactionHistory -->
+        <test-method signature="fillTheOnlineForm()[pri:5, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:34 PDT" name="fillTheOnlineForm" finished-at="2022-09-05T23:31:38 PDT" duration-ms="3795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillTheOnlineForm -->
+        <test-method signature="signOffValidation()[pri:6, instance:com.app.execution.Execution@2a693f59]" started-at="2022-09-05T23:31:38 PDT" name="signOffValidation" finished-at="2022-09-05T23:31:39 PDT" duration-ms="1094" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOffValidation -->
+      </class> <!-- com.app.execution.Execution -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
